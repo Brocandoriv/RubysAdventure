@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1232692544745351393}
   - component: {fileID: -3242614673678615527}
   - component: {fileID: 6173062262307748025}
+  - component: {fileID: 8933108956958306515}
   m_Layer: 0
   m_Name: bot
   m_TagString: Untagged
@@ -144,3 +145,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8ea4d40fdc3bc458548cc28be41074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  vertical: 0
+  changeTime: 3
+--- !u!95 &8933108956958306515
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6735100460078501124}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e16dc6152fcef6f428c1687d17fa34e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
