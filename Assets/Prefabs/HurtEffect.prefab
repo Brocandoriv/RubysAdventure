@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6347469502622959678}
   - component: {fileID: 1385151869789780135}
   m_Layer: 0
-  m_Name: HealthEffect
+  m_Name: HurtEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 0
     angle: 5
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -975,7 +975,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 4
+        scalar: 3
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1538,7 +1538,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -297986023845220798, guid: bb5bb2f184426a64cac53faa220820f5, type: 3}
+    - sprite: {fileID: 664059343884491645, guid: bb5bb2f184426a64cac53faa220820f5, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

@@ -9,6 +9,8 @@ public class RubyController : MonoBehaviour
     public int maxHealth = 5;
 
     public GameObject projectilePrefab;
+    public ParticleSystem hurtEffect;
+    public ParticleSystem healthEffect;
 
     public AudioClip throwSound;
     public AudioClip hitSound;
@@ -99,16 +101,25 @@ public class RubyController : MonoBehaviour
         {
             if (isInvincible)
                 return;
+            Vector2 position = rigidbody2d.position;
 
+            ParticleSystem hurtParticles = Instantiate(hurtEffect, position, Quaternion.identity);
             isInvincible = true;
             invincibleTimer = timeInvincible;
 
             PlaySound(hitSound);
+
+        }
+        else
+        {
+            Vector2 position = rigidbody2d.position;
+            ParticleSystem hpParticles = Instantiate(healthEffect, position, Quaternion.identity);
         }
 
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+            currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
-        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+            UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+        
     }
 
     void Launch()

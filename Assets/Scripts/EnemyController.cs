@@ -75,6 +75,7 @@ public class EnemyController : MonoBehaviour
         if (player != null)
         {
             player.ChangeHealth(-1);
+            
         }
     }
 
@@ -87,5 +88,7 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Fixed");
 
         smokeEffect.Stop();
+        
+        FixedRobotCounter.instance.IncreaseRobotCounter();
     }
 }
