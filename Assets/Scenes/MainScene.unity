@@ -1386,8 +1386,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1088484418}
   - component: {fileID: 1088484421}
-  - component: {fileID: 1088484419}
   - component: {fileID: 1088484420}
+  - component: {fileID: 1088484419}
   m_Layer: 5
   m_Name: GameOverText
   m_TagString: Untagged
@@ -1402,7 +1402,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088484417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1411,7 +1411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000020266, y: 0.00000083447}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 523.24, y: 130.8113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088484419
