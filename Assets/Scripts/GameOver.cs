@@ -34,14 +34,14 @@ public class GameOver : MonoBehaviour
     public void winGame()
     {
         Debug.Log("Win Game");
-        gameOverText.text = "You win! Press R to restart";
+        gameOverText.text = "You win! Game created by Group 23. Press R to restart";
         gameOver = true;
         
     }
     public void loseGame()
     {
         Debug.Log("Lose Game");
-        gameOverText.text = "You lose! Press R to restart";
+        gameOverText.text = "You lose! Game created by Group 23. Press R to restart";
         gameOver = true;
         
     }
