@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public static GameOver instance { get; private set; }
-    public static bool gameOver = false;
+    public bool gameOver = false;
 
     public TMP_Text gameOverText;
     void Awake()
