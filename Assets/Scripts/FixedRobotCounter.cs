@@ -7,8 +7,9 @@ public class FixedRobotCounter : MonoBehaviour
 {
     public static FixedRobotCounter instance { get; private set; }
     public int fixedRobots = 0;
+    public int theMaxRobots = 2;
+
     public TMP_Text fixedRobotText;
-    // Start is called before the first frame update
     void Awake()
     {
         instance = this;
@@ -21,5 +22,11 @@ public class FixedRobotCounter : MonoBehaviour
     {
         fixedRobots++;
         fixedRobotText.text = "Fixed Robots: " + fixedRobots.ToString();
+        Debug.Log("Fixed Robots: " + fixedRobots);
+        Debug.Log("Max Robots: " + theMaxRobots);
+        if (fixedRobots == theMaxRobots)
+        {
+            GameOver.instance.winGame();
+        }
     }
 }
