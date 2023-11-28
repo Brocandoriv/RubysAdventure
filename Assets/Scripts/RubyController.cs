@@ -81,6 +81,12 @@ public class RubyController : MonoBehaviour
                 if (character != null)
                 {
                     character.DisplayDialog();
+                    Debug.Log(character.name);
+                }
+                //Check if the player is talking to "Death"
+                if (character.name == "Death") { 
+                    //Start the time trial timer
+                    TimeTrial.instance.startTimer();
                 }
             }
         }
