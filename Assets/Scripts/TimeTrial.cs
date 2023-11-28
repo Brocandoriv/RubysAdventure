@@ -31,7 +31,7 @@ public class TimeTrial : MonoBehaviour
     private void _tick()
     {
         timeRemaining--;
-        if (timeRemaining > 0)
+        if (timeRemaining > 0 &&isCountingDown==true)
         {
             //Update Text
             TimeTrialText.text = "Time Left: " +  timeRemaining.ToString();
@@ -40,7 +40,13 @@ public class TimeTrial : MonoBehaviour
         }
         else
         {
+            GameOver.instance.loseGame();
             isCountingDown = false;
         }
+    }
+    public void stopTimer()
+    {
+        Debug.Log("Timer Stopped");
+        isCountingDown=false;
     }
 }

@@ -92,7 +92,7 @@ public class RubyController : MonoBehaviour
         }
         if (GameOver.instance.gameOver == true)
         {
-            Debug.Log("Game Is over");
+            //Debug.Log("Game Is over");
             speed = 0;
         }
     }

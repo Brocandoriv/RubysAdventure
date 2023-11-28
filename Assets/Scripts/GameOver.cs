@@ -8,6 +8,9 @@ public class GameOver : MonoBehaviour
 {
     public static GameOver instance { get; private set; }
     public bool gameOver = false;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    AudioSource audioSource;
 
     public TMP_Text gameOverText;
     void Awake()
@@ -17,6 +20,7 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         gameOverText.text = "";
+        audioSource = GetComponent<AudioSource>();
     }
     
 
@@ -31,9 +35,15 @@ public class GameOver : MonoBehaviour
             }
         }
     }
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
     public void winGame()
     {
         Debug.Log("Win Game");
+        TimeTrial.instance.stopTimer();
+        PlaySound(winSound);
         gameOverText.text = "You win! Game created by Group 23. Press R to restart";
         gameOver = true;
         
@@ -41,6 +51,8 @@ public class GameOver : MonoBehaviour
     public void loseGame()
     {
         Debug.Log("Lose Game");
+        TimeTrial.instance.stopTimer();
+        PlaySound(loseSound);
         gameOverText.text = "You lose! Game created by Group 23. Press R to restart";
         gameOver = true;
         
